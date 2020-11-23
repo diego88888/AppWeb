@@ -1,16 +1,17 @@
 <?php
-// y esta es la conexión al SQL Server
-$servidor="localhost\SQLEXPRESS";
-$connectionInfo = array( "Database"=>"LOGIN");
+// Conexión al SQL Server
+$servidor = "localhost\SQLEXPRESS";
+$connectionInfo = array( "Database" => "WIRTZ");
 
 //Conectamos
-$conexion=sqlsrv_connect($servidor, $connectionInfo);
+$conexion = sqlsrv_connect($servidor, $connectionInfo);
 // Comprobamos que la conexión es correcta
 if (!$conexion) { 
     exit( "Error al conectar con SQL Server: " . $conexion);
 }
 
-/*$sql = "select COD, NOM from USUARIOS";
+/*Ejemplo consulta SQL
+$sql = "select COD, NOM from USUARIOS";
 $stmt = sqlsrv_query($conexion, $sql);
 
 
