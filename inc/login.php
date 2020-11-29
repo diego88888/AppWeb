@@ -9,10 +9,7 @@ if(!empty($_POST)){
             if ( !file_exists('../conexiones/'.$bbdd.'.php') ){
                 // No Existe, salimos
 				print "<script>alert(\"El centro no existe.\");window.location = '../login.php';</script>";
-            }			
-
-			$ruta_conexion = "../conexiones/".$bbdd.".php";
-			include $ruta_conexion;
+            }
 			//Conectamos con la bbdd del login
 			$servidor2 = "localhost\SQLEXPRESS";
 			$connectionInfo2 = array( "Database"=>"LOGIN");

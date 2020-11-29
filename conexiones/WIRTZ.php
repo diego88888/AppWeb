@@ -7,22 +7,27 @@ $connectionInfo = array( "Database" => "WIRTZ");
 $conexion = sqlsrv_connect($servidor, $connectionInfo);
 // Comprobamos que la conexión es correcta
 if (!$conexion) { 
-    exit( "Error al conectar con SQL Server: " . $conexion);
+    exit("Error al conectar con SQL Server: " . $conexion);
 }
 
-/*Ejemplo consulta SQL
-$sql = "select COD, NOM from USUARIOS";
+/*Ejemplo consulta SQL de varios resultados
+$cursos = array();
+$sql = "select CURSO from ALUMNADO";
 $stmt = sqlsrv_query($conexion, $sql);
 
-
-// Hacer que sea disponible para su lectura la primera (y en este caso única) fila del conjunto resultado.
-if( sqlsrv_fetch( $stmt ) === false) {
+if( $stmt  === false) {
     die( print_r( sqlsrv_errors(), true));
 }
-$cod = sqlsrv_get_field( $stmt, 0);
 
-$nom = sqlsrv_get_field( $stmt, 1);
+while( $row = sqlsrv_fetch_array( $stmt ) ) {
+    $cursos[] = $row['CURSO'];
+}
 
-echo $cod.'--------'.$nom;*/
+sqlsrv_free_stmt( $stmt);
+
+
+for ($i=0; $i < count($cursos); $i++) { 
+    echo $cursos[$i];
+}*/
 ?>
 

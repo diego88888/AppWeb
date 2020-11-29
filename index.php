@@ -1,6 +1,6 @@
 <?php
   session_start();
-  if ( !isset( $_SESSION[ "COD" ] ) || $_SESSION[ "COD" ] == null ) {
+  if ( !isset( $_SESSION["COD"] ) || $_SESSION["COD"] == null ) {
     print "<script>window.location='login.php';</script>";	
   }
 
@@ -27,14 +27,29 @@
     <script src = "plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- overlayScrollbars -->
     <link rel = "stylesheet" href = "plugins/overlayScrollbars/css/OverlayScrollbars.min.css">	
-      <!-- DataTables -->
-    <link rel = "stylesheet" type = "text/css" href = "https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.21/b-1.6.2/b-colvis-1.6.2/b-html5-1.6.2/b-print-1.6.2/r-2.2.5/rg-1.1.2/sp-1.1.1/datatables.min.css"/>
-    <script type = "text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
-    <script type = "text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
-    <script type = "text/javascript" src = "https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.21/b-1.6.2/b-colvis-1.6.2/b-html5-1.6.2/b-print-1.6.2/r-2.2.5/rg-1.1.2/sp-1.1.1/datatables.min.js"></script>
+    <!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <!-- ChartJS -->
     <script src = "plugins/Chart.min.js"></script>	
     <script src = "plugins/Chart.utils.js"></script>
+    <script>
+      $(function () {
+        $("#example1").DataTable({
+          "responsive": true,
+          "autoWidth": false,
+        });
+        $('#example2').DataTable({
+          "paging": true,
+          "lengthChange": false,
+          "searching": false,
+          "ordering": true,
+          "info": true,
+          "autoWidth": false,
+          "responsive": true,
+        });
+      });
+    </script>
   </head>
   <body class = "hold-transition sidebar-mini layout-fixed">
     <div class = "wrapper">
@@ -70,6 +85,11 @@
         <?php
           if (!isset($_GET['constructor'])) {
             principal();
+          }else {
+            switch ($_GET['constructor']) {
+              case 'alumnado': alumnado();break;
+              case 'eso1': eso1();break;
+            }
           }
         ?>
       </div>
@@ -77,14 +97,17 @@
         
       </footer>
       <!-- ./wrapper -->
-    </div>	
-    <!-- Sparkline -->
-    
+    </div>
     <!-- Javascript -->	
     <script src = "plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>	
     <script src = "plugins/sparklines/sparkline.js"></script>	
     <!-- AdminLTE App -->
     <script src = "dist/js/adminlte.js"></script>	
+    <!-- DataTables -->
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
   </body>
 </html>
 	
