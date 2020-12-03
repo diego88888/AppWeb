@@ -11,7 +11,7 @@ function principal() {
       <!-- /.col -->
       <div class = "col-sm-6">
         <ol class = "breadcrumb float-sm-right">
-          <li class = "breadcrumb-item"><a href = "#">Inicio</a></li>
+          <li class = "breadcrumb-item">Inicio</a></li>
           <li class = "breadcrumb-item active">Principal</li>
         </ol>
       </div>

@@ -89,12 +89,21 @@
             switch ($_GET['constructor']) {
               case 'alumnado': alumnado();break;
               case 'eso1': eso1();break;
+              case 'eso2': eso2();break;
+              case 'eso3': eso3();break;
+              case 'eso4': eso4();break;
+              case 'bac1': bac1();break;
+              case 'bac2': bac2();break;
+              case 'profesorado': profesorado();break;
+              case 'personal': personal();break;
+              case 'transporte': transporte();break;
+              case 'equipamiento': equipamiento();break;
             }
           }
         ?>
       </div>
       <footer class = "main-footer">
-        
+          <!-- CONTENIDO DEL FOOTER -->
       </footer>
       <!-- ./wrapper -->
     </div>

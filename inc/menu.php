@@ -3,7 +3,6 @@ function sidebarmenu(){
 ?>	
   <nav class = "mt-2">
     <ul class = "nav nav-pills nav-sidebar flex-column" data-widget = "treeview" role = "menu" data-accordion = "false">
-      <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
       <li class = "nav-item">
         <a href = "index.php?constructor=alumnado" class="nav-link">
           <i class = "nav-icon fas fa-user-graduate"></i>
@@ -21,7 +20,7 @@ function sidebarmenu(){
         </a>
       </li>
       <li class = "nav-item">
-        <a href = "#" class="nav-link">
+        <a href = "index.php?constructor=eso2" class="nav-link">
           <i class = "nav-icon fas fa-dice-two"></i>
             <p>
               2ºESO
@@ -29,7 +28,7 @@ function sidebarmenu(){
         </a>
       </li>
       <li class = "nav-item">
-        <a href = "#" class="nav-link">
+        <a href = "index.php?constructor=eso3" class="nav-link">
           <i class = "nav-icon fas fa-dice-three"></i>
             <p>
               3ºESO
@@ -37,7 +36,7 @@ function sidebarmenu(){
         </a>
       </li>
       <li class = "nav-item">
-        <a href = "#" class="nav-link">
+        <a href = "index.php?constructor=eso4" class="nav-link">
           <i class = "nav-icon fas fa-dice-four"></i>
             <p>
               4ºESO
@@ -45,7 +44,7 @@ function sidebarmenu(){
         </a>
       </li>
       <li class = "nav-item">
-        <a href = "#" class="nav-link">
+        <a href = "index.php?constructor=bac1" class="nav-link">
           <i class = "nav-icon fas fa-dice-five"></i>
             <p>
               1ºBachiller
@@ -53,7 +52,7 @@ function sidebarmenu(){
         </a>
       </li>
       <li class = "nav-item">
-        <a href = "#" class="nav-link">
+        <a href = "index.php?constructor=bac2" class="nav-link">
           <i class = "nav-icon fas fa-dice-six"></i>
             <p>
               2ºBachiller
@@ -61,7 +60,7 @@ function sidebarmenu(){
         </a>
       </li>
       <li class = "nav-item">
-        <a href = "#" class="nav-link">
+        <a href = "index.php?constructor=profesorado" class="nav-link">
           <i class = "nav-icon fas fa-chalkboard-teacher"></i>
             <p>
               Profesorado
@@ -69,7 +68,7 @@ function sidebarmenu(){
         </a>
       </li>
       <li class = "nav-item">
-        <a href = "#" class="nav-link">
+        <a href = "index.php?constructor=personal" class="nav-link">
           <i class = "nav-icon fas fa-users"></i>
             <p>
               Personal
@@ -77,7 +76,7 @@ function sidebarmenu(){
         </a>
       </li>
       <li class = "nav-item">
-        <a href = "#" class="nav-link">
+        <a href = "index.php?constructor=transporte" class="nav-link">
           <i class = "nav-icon fas fa-bus-alt"></i>
             <p>
               Transporte
@@ -85,7 +84,7 @@ function sidebarmenu(){
         </a>
       </li>
       <li class = "nav-item">
-        <a href = "#" class="nav-link">
+        <a href = "index.php?constructor=equipamiento" class="nav-link">
           <i class = "nav-icon fas fa-chalkboard"></i>
             <p>
               Equipamiento
@@ -107,7 +106,6 @@ function sidebarmenu(){
 
 function navbar() {
 ?>	
-  <!-- Left navbar links -->
   <ul class = "navbar-nav">
     <li class = "nav-item">
       <a class = "nav-link" data-widget = "pushmenu" href = "#"><i class = "fas fa-bars"></i></a>

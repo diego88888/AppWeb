@@ -31,7 +31,7 @@ function alumnado(){
     $query = "select * from ALUMNADO";
     $resultado = sqlsrv_query($conexion, $query);
 
-    if($resultado  === false) {
+    if($resultado === false) {
         die( print_r(sqlsrv_errors(), true));
     }
 

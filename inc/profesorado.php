@@ -1,26 +1,19 @@
 <?php
-function eso1(){
+function profesorado(){
     $ruta_conexion = "conexiones/".$_SESSION["BBDD"].".php";
     include $ruta_conexion;
     
     $DNI = array();
     $NOM = array();
     $APELL = array();
-    $FECNAC = array();
+    $EMAIL = array();
     $TARSAN = array();
     $TELEF = array();
-    $EMAIL = array();
-    $NACIO = array();
-    $LUGNAC = array();
-    $PROVNAC = array();
-    $PAISNAC = array();
-    $PADRE = array();
-    $TLFPA = array();
-    $MADRE = array();
-    $TLFMA = array();
     $DIRECC = array();
-    $CP = array();
+    $SUELDO = array();
     $CURSO = array();
+    $CP = array();
+    $JORNA = array();
 
     $nombre_completo = array();
     $curso = array();
@@ -28,10 +21,10 @@ function eso1(){
     $grado;
     $clase;
 
-    $query = "select * from ALUMNADO where CURSO like 'ESO1%'";
+    $query = "select * from PROFESORADO";
     $resultado = sqlsrv_query($conexion, $query);
 
-    if($resultado === false) {
+    if($resultado  === false) {
         die( print_r(sqlsrv_errors(), true));
     }
 
@@ -39,21 +32,14 @@ function eso1(){
         $DNI[] = $row['DNI'];
         $NOM[] = $row['NOM'];
         $APELL[] = $row['APELL'];
-        $FECNAC[] = $row['FECNAC'];
         $TARSAN[] = $row['TARSAN'];
         $TELEF[] = $row['TELEF'];
         $EMAIL[] = $row['EMAIL'];
-        $NACIO[] = $row['NACIO'];
-        $LUGNAC[] = $row['LUGNAC'];
-        $PROVNAC[] = $row['PROVNAC'];
-        $PAISNAC[] = $row['PAISNAC'];
-        $PADRE[] = $row['PADRE'];
-        $TLFPA[] = $row['TLFPA'];
-        $MADRE[] = $row['MADRE'];
-        $TLFMA[] = $row['TLFMA'];
         $DIRECC[] = $row['DIRECC'];
         $CP[] = $row['CP'];
         $CURSO[] = $row['CURSO'];
+        $SUELDO[] = $row['SUELDO'];
+        $JORNA[] = $row['JORNA'];
     }
 
     sqlsrv_free_stmt($resultado);
@@ -70,13 +56,13 @@ function eso1(){
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 text-dark">Datos generales de 1ºESO</h1>
+                <h1 class="m-0 text-dark">Datos generales Profesorado</h1>
             </div>
             
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item">Inicio</li>
-                <li class="breadcrumb-item active">1ºESO</li>			
+                <li class="breadcrumb-item active">Profesorado</li>			
                 </ol>
             </div> 
         </div>
@@ -88,8 +74,7 @@ function eso1(){
           <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="m-0">Datos 1ºESO.</h4><br><br>
-                    <h5 class="m-0">Alumnos.</h5>
+                    <h5 class="m-0">Profesorado.</h5>
                 </div>
                 <div class="card-body">
                     <table id="example1" class="table table-bordered table-striped">
@@ -97,21 +82,14 @@ function eso1(){
                             <tr>
                                 <th>DNI</th>
                                 <th>Nombre</th>
-                                <th>Fecha nacimiento</th>
                                 <th>Tarjeta sanitaria</th>
                                 <th>Teléfono</th>
                                 <th>Email</th>
-                                <th>Nacionalidad</th>
-                                <th>Lugar nacimiento</th>
-                                <th>Provincia nacimiento</th>
-                                <th>País nacimiento</th>
-                                <th>Padre</th>
-                                <th>Teléfono padre</th>
-                                <th>Madre</th>
-                                <th>Teléfono madre</th>
                                 <th>Direccion</th>
-                                <th>Código postal</th>
                                 <th>Curso</th>
+                                <th>Sueldo</th>
+                                <th>Jornada</th>
+                                <th>Código Postal</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -119,21 +97,14 @@ function eso1(){
                             <tr>
                                 <td><?php echo $DNI[$i]; ?></td>
                                 <td><?php echo $nombre_completo[$i]; ?></td>
-                                <td><?php echo $FECNAC[$i]; ?></td>
                                 <td><?php echo $TARSAN[$i]; ?></td>
                                 <td><?php echo $TELEF[$i]; ?></td>
                                 <td><?php echo $EMAIL[$i]; ?></td>
-                                <td><?php echo utf8_encode($NACIO[$i]); ?></td>
-                                <td><?php echo $LUGNAC[$i]; ?></td>
-                                <td><?php echo utf8_encode($PROVNAC[$i]); ?></td>
-                                <td><?php echo utf8_encode($PAISNAC[$i]); ?></td>
-                                <td><?php echo $PADRE[$i]; ?></td>
-                                <td><?php echo $TLFPA[$i]; ?></td>
-                                <td><?php echo $MADRE[$i]; ?></td>
-                                <td><?php echo $TLFMA[$i]; ?></td>
                                 <td><?php echo $DIRECC[$i]; ?></td>
-                                <td><?php echo $CP[$i]; ?></td>
                                 <td><?php echo $curso[$i]; ?></td>
+                                <td><?php echo $SUELDO[$i].'€'; ?></td>
+                                <td><?php echo utf8_encode($JORNA[$i]); ?></td>
+                                <td><?php echo $CP[$i]; ?></td>
                             </tr>
                             <?php } ?>
                         </tbody>
