@@ -1,5 +1,5 @@
 <?php
-function eso4(){
+function eso2a(){
     $ruta_conexion = "conexiones/".$_SESSION["BBDD"].".php";
     include $ruta_conexion;
     
@@ -28,7 +28,7 @@ function eso4(){
     $grado;
     $clase;
 
-    $query = "select * from ALUMNADO where CURSO like 'ESO4%'";
+    $query = "select * from ALUMNADO where CURSO like 'ESO2%'";
     $resultado = sqlsrv_query($conexion, $query);
 
     if($resultado === false) {
@@ -70,13 +70,14 @@ function eso4(){
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 text-dark">Datos generales de 4ºESO</h1>
+                <h1 class="m-0 text-dark">Datos generales de 2ºESO</h1>
             </div>
             
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item">Inicio</li>
-                <li class="breadcrumb-item active">4ºESO</li>			
+                <li class="breadcrumb-item active">2ºESO</li>
+                <li class="breadcrumb-item active">Alumnos</li>			
                 </ol>
             </div> 
         </div>
@@ -88,7 +89,7 @@ function eso4(){
           <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="m-0">Datos 4ºESO.</h4><br><br>
+                    <h4 class="m-0">Datos 2ºESO.</h4><br><br>
                     <h5 class="m-0">Alumnos.</h5>
                 </div>
                 <div class="card-body">

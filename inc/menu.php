@@ -12,52 +12,142 @@ function sidebarmenu(){
         </a>
       </li>
       <li class="nav-item has-treeview">
-        <a href = "index.php?constructor=eso1" class="nav-link">
+        <a href = "#" class="nav-link">
           <i class = "nav-icon fas fa-dice-one"></i>
             <p>
               1ºESO
+              <i class="right fas fa-angle-left"></i>
             </p>
         </a>
+        <ul class="nav nav-treeview">
+          <li class="nav-item">
+            <a href="index.php?constructor=eso1a" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+					    <p>Alumnos</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.php?constructor=eso1p" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+					    <p>Profesores</p>
+            </a>
+          </li>
+        </ul>
       </li>
       <li class = "nav-item">
-        <a href = "index.php?constructor=eso2" class="nav-link">
+        <a href = "#" class="nav-link">
           <i class = "nav-icon fas fa-dice-two"></i>
             <p>
               2ºESO
+              <i class="right fas fa-angle-left"></i>
             </p>
         </a>
+        <ul class="nav nav-treeview">
+          <li class="nav-item">
+            <a href="index.php?constructor=eso2a" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+					    <p>Alumnos</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.php?constructor=eso2p" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+					    <p>Profesores</p>
+            </a>
+          </li>
+        </ul>
       </li>
       <li class = "nav-item">
-        <a href = "index.php?constructor=eso3" class="nav-link">
+        <a href = "#" class="nav-link">
           <i class = "nav-icon fas fa-dice-three"></i>
             <p>
               3ºESO
+              <i class="right fas fa-angle-left"></i>
             </p>
         </a>
+        <ul class="nav nav-treeview">
+          <li class="nav-item">
+            <a href="index.php?constructor=eso3a" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+					    <p>Alumnos</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.php?constructor=eso3p" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+					    <p>Profesores</p>
+            </a>
+          </li>
+        </ul>
       </li>
       <li class = "nav-item">
-        <a href = "index.php?constructor=eso4" class="nav-link">
+        <a href = "#" class="nav-link">
           <i class = "nav-icon fas fa-dice-four"></i>
             <p>
               4ºESO
+              <i class="right fas fa-angle-left"></i>
             </p>
         </a>
+        <ul class="nav nav-treeview">
+          <li class="nav-item">
+            <a href="index.php?constructor=eso4a" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+					    <p>Alumnos</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.php?constructor=eso4p" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+					    <p>Profesores</p>
+            </a>
+          </li>
+        </ul>
       </li>
       <li class = "nav-item">
-        <a href = "index.php?constructor=bac1" class="nav-link">
+        <a href = "#" class="nav-link">
           <i class = "nav-icon fas fa-dice-five"></i>
             <p>
               1ºBachiller
+              <i class="right fas fa-angle-left"></i>
             </p>
         </a>
+        <ul class="nav nav-treeview">
+          <li class="nav-item">
+            <a href="index.php?constructor=bac1a" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+					    <p>Alumnos</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.php?constructor=bac1p" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+					    <p>Profesores</p>
+            </a>
+          </li>
+        </ul>
       </li>
       <li class = "nav-item">
-        <a href = "index.php?constructor=bac2" class="nav-link">
+        <a href = "#" class="nav-link">
           <i class = "nav-icon fas fa-dice-six"></i>
             <p>
               2ºBachiller
+              <i class="right fas fa-angle-left"></i>
             </p>
         </a>
+        <ul class="nav nav-treeview">
+          <li class="nav-item">
+            <a href="index.php?constructor=bac2a" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+					    <p>Alumnos</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="index.php?constructor=bac2p" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+					    <p>Profesores</p>
+            </a>
+          </li>
+        </ul>
       </li>
       <li class = "nav-item">
         <a href = "index.php?constructor=profesorado" class="nav-link">

@@ -88,12 +88,24 @@
           }else {
             switch ($_GET['constructor']) {
               case 'alumnado': alumnado();break;
-              case 'eso1': eso1();break;
-              case 'eso2': eso2();break;
-              case 'eso3': eso3();break;
-              case 'eso4': eso4();break;
-              case 'bac1': bac1();break;
-              case 'bac2': bac2();break;
+              //ESO1
+              case 'eso1a': eso1a();break;
+              case 'eso1p': eso1p();break;
+              //ESO2
+              case 'eso2a': eso2a();break;
+              case 'eso2p': eso2p();break;
+              //ESO3
+              case 'eso3a': eso3a();break;
+              case 'eso3p': eso3p();break;
+              //ESO4
+              case 'eso4a': eso4a();break;
+              case 'eso4p': eso4p();break;
+              //BAC1
+              case 'bac1a': bac1a();break;
+              case 'bac1p': bac1p();break;
+              //BAC2
+              case 'bac2a': bac2a();break;
+              case 'bac2p': bac2p();break;
               case 'profesorado': profesorado();break;
               case 'personal': personal();break;
               case 'transporte': transporte();break;
@@ -103,7 +115,7 @@
         ?>
       </div>
       <footer class = "main-footer">
-          <!-- CONTENIDO DEL FOOTER -->
+        <!-- CONTENIDO DEL FOOTER -->
       </footer>
       <!-- ./wrapper -->
     </div>
@@ -122,16 +134,16 @@
 	
 <?php
   function incluir($dir, & $results = array()) {
-      $files = scandir($dir);
+    $files = scandir($dir);
 
-      foreach ($files as $key => $value) {
-          $path = realpath($dir . DIRECTORY_SEPARATOR . $value);
-          if (!is_dir($path)) {
-            include($results[] = $path);
-          } else if ($value != "." && $value != "..") {
-            incluir($path, $results);
-            $results[] = $path;
-          }
+    foreach ($files as $key => $value) {
+      $path = realpath($dir . DIRECTORY_SEPARATOR . $value);
+      if (!is_dir($path)) {
+        include($results[] = $path);
+      }else if ($value != "." && $value != "..") {
+        incluir($path, $results);
+        $results[] = $path;
       }
+    }
   }	
 ?>

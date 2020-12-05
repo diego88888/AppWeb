@@ -1,5 +1,5 @@
 <?php
-function bac2(){
+function bac2a(){
     $ruta_conexion = "conexiones/".$_SESSION["BBDD"].".php";
     include $ruta_conexion;
     
@@ -76,7 +76,8 @@ function bac2(){
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item">Inicio</li>
-                <li class="breadcrumb-item active">2ºBAC</li>			
+                <li class="breadcrumb-item active">2ºBAC</li>
+                <li class="breadcrumb-item active">Alumnos</li>		
                 </ol>
             </div> 
         </div>
