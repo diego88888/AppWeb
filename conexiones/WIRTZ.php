@@ -10,9 +10,9 @@ if (!$conexion) {
     exit("Error al conectar con SQL Server: " . $conexion);
 }
 
-/*Ejemplo consulta SQL de varios resultados
-$cursos = array();
-$sql = "select CURSO from ALUMNADO";
+/*Ejemplo consulta SQL de sacar el resutado de un COUNT
+$cursos;
+$sql = "select COUNT(DNI) AS TOTAL from ALUMNADO where CURSO like 'ESO3%'";
 $stmt = sqlsrv_query($conexion, $sql);
 
 if( $stmt  === false) {
@@ -20,14 +20,11 @@ if( $stmt  === false) {
 }
 
 while( $row = sqlsrv_fetch_array( $stmt ) ) {
-    $cursos[] = $row['CURSO'];
+    $cursos = $row['TOTAL'];
 }
 
 sqlsrv_free_stmt( $stmt);
-
-
-for ($i=0; $i < count($cursos); $i++) { 
-    echo $cursos[$i];
-}*/
+echo $cursos;
+*/
 ?>
 

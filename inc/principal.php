@@ -35,7 +35,7 @@ function principal() {
           </div>
           <div class = "card-body"> 
             <div class = "image">
-              <img src = "imagenes/<?php echo $_SESSION["BBDD"] ?>.jpg" alt="Imagen del centro">
+              <img src = "imagenes/<?php echo $_SESSION["BBDD"] ?>.jpg" alt = "Imagen del centro">
             </div>
           </div>
         </div>
@@ -49,8 +49,8 @@ function principal() {
           <div class = "card-header">
             <h5 class = "m-0">Gráfico del alumnado por curso</h5>
           </div>
-          <div class="card-body">
-            <?php //grafico?>
+          <div class = "card-body">
+            <canvas id = "graficoAlumnos" style = "min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
           </div>
         </div>
       </div>
@@ -60,7 +60,7 @@ function principal() {
             <h5 class = "m-0">Gráfico del profesorado por curso</h5>
           </div>
           <div class = "card-body">
-            <?php //grafico?>
+            <canvas id = "graficoProfesores" style = "min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
           </div>
         </div>
       </div>
@@ -73,7 +73,7 @@ function principal() {
             <h5 class = "m-0">Gráfico de empleados del centro </h5>
           </div>
           <div class = "card-body">
-            <?php //grafico?>
+            <canvas id = "graficoPersonal" style = "min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@ function principal() {
             <h5 class = "m-0">Gráfico de transporte </h5>
           </div>
           <div class = "card-body">
-            <?php //grafico?>
+            <canvas id = "graficoTransporte" style = "min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
           </div>
         </div>
       </div>

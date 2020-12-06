@@ -4,7 +4,7 @@
     print "<script>window.location='login.php';</script>";	
   }
 
-  incluir ('inc');
+  incluir('inc');
 ?>
 <!DOCTYPE html>
 <html lang = "es">
@@ -51,6 +51,7 @@
       });
     </script>
   </head>
+
   <body class = "hold-transition sidebar-mini layout-fixed">
     <div class = "wrapper">
       <!-- Navbar -->
@@ -119,6 +120,7 @@
       </footer>
       <!-- ./wrapper -->
     </div>
+
     <!-- Javascript -->	
     <script src = "plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>	
     <script src = "plugins/sparklines/sparkline.js"></script>	
@@ -129,6 +131,112 @@
     <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
     <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <!-- ChartJS -->
+    <script src = "plugins/chart.js/Chart.min.js"></script>
+    <script>
+      var donutChartCanvas = $('#graficoAlumnos').get(0).getContext('2d')
+      var donutData = {
+        labels: [
+          '1ºESO', 
+          '2ºESO',
+          '3ºESO', 
+          '4ºESO', 
+          '1ºBAC', 
+          '2ºBAC', 
+        ],
+        datasets: [
+          {
+            data: [<?php grafico_alumnos(); ?>],
+            backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
+          }
+        ]
+      }
+      var donutOptions = {
+        maintainAspectRatio : false,
+        responsive : true,
+      }
+      var donutChart = new Chart(donutChartCanvas, {
+        type: 'doughnut',
+        data: donutData,
+        options: donutOptions      
+      })
+    </script>
+    <script>
+      var donutChartCanvas = $('#graficoProfesores').get(0).getContext('2d')
+      var donutData = {
+        labels: [
+          '1ºESO', 
+          '2ºESO',
+          '3ºESO', 
+          '4ºESO', 
+          '1ºBAC', 
+          '2ºBAC', 
+        ],
+        datasets: [
+          {
+            data: [<?php grafico_profesores(); ?>],
+            backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
+          }
+        ]
+      }
+      var donutOptions = {
+        maintainAspectRatio : false,
+        responsive : true,
+      }
+      var donutChart = new Chart(donutChartCanvas, {
+        type: 'pie',
+        data: donutData,
+        options: donutOptions      
+      })
+    </script>
+    <script>
+      var donutChartCanvas = $('#graficoPersonal').get(0).getContext('2d')
+      var donutData = {
+        labels: [
+          'Limpieza', 
+          'Conserjería', 
+        ],
+        datasets: [
+          {
+            data: [<?php grafico_personal(); ?>],
+            backgroundColor : ['#f56954', '#00a65a'],
+          }
+        ]
+      }
+      var donutOptions = {
+        maintainAspectRatio : false,
+        responsive : true,
+      }
+      var donutChart = new Chart(donutChartCanvas, {
+        type: 'pie',
+        data: donutData,
+        options: donutOptions      
+      })
+    </script>
+    <script>
+      var donutChartCanvas = $('#graficoTransporte').get(0).getContext('2d')
+      var donutData = {
+        labels: [
+          'Cambre-Coruña', 
+          'Burgo-Coruña', 
+        ],
+        datasets: [
+          {
+            data: [<?php grafico_transporte(); ?>],
+            backgroundColor : ['#3c8dbc', '#f39c12'],
+          }
+        ]
+      }
+      var donutOptions = {
+        maintainAspectRatio : false,
+        responsive : true,
+      }
+      var donutChart = new Chart(donutChartCanvas, {
+        type: 'doughnut',
+        data: donutData,
+        options: donutOptions      
+      })
+    </script>
   </body>
 </html>
 	
