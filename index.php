@@ -1,10 +1,15 @@
 <?php
   session_start();
-  if ( !isset( $_SESSION["COD"] ) || $_SESSION["COD"] == null ) {
+  if ( !isset($_SESSION["COD"]) || $_SESSION["COD"] == null) {
     print "<script>window.location='login.php';</script>";	
   }
+  
+  if(isset($_SESSION["BBDD"])){
+    incluir('inc/'.$_SESSION["BBDD"].'');
+  }else{
+    print "<script>window.location='login.php';</script>";
+  }
 
-  incluir('inc');
 ?>
 <!DOCTYPE html>
 <html lang = "es">
