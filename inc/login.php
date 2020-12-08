@@ -4,10 +4,10 @@ if(!empty($_POST)){
 		if($_POST["username"] != "" && $_POST["password"] != ""  && $_POST["centro"] != ""){
 			$usuario = $_POST["username"];
 			$contrasena = $_POST["password"];
-			// Comprobamos que exista archivo de conexión
+			//Comprobamos que exista archivo de conexión
 			$bbdd = strtoupper($_POST["centro"]);
-            if ( !file_exists('../conexiones/'.$bbdd.'.php')){
-                // No Existe, salimos
+            if(!file_exists('../conexiones/'.$bbdd.'.php')){
+                //No Existe, salimos
 				print "<script>alert(\"El centro no existe.\");window.location = '../login.php';</script>";
             }
 			//Conectamos con la bbdd del login
@@ -16,9 +16,9 @@ if(!empty($_POST)){
 
 			//Conectamos
 			$conexion2 = sqlsrv_connect($servidor2, $connectionInfo2);
-			// Comprobamos que la conexión es correcta
+			//Comprobamos que la conexión es correcta
 			if (!$conexion2) { 
-				exit( "Error al conectar con SQL Server: " . $conexion2);
+				exit("Error al conectar con SQL Server: " . $conexion2);
 			}
 			//Query para sacar el usuario y la contraseña
 			$cod_usuario = null;
@@ -26,12 +26,12 @@ if(!empty($_POST)){
 			
 			$stmt2 = sqlsrv_query($conexion2, $query_login);
 			if( sqlsrv_fetch($stmt2) === false) {
-				die( 'El servidor remoto SQL SERVER no se encuentra disponible');
+				die('El servidor remoto SQL SERVER no se encuentra disponible');
 			}
 
-			$cod_usuario = sqlsrv_get_field( $stmt2, 0);
-			$nom_usuario = sqlsrv_get_field( $stmt2, 1);
-			$nomcen_usuario = sqlsrv_get_field( $stmt2, 2);
+			$cod_usuario = sqlsrv_get_field($stmt2, 0);
+			$nom_usuario = sqlsrv_get_field($stmt2, 1);
+			$nomcen_usuario = sqlsrv_get_field($stmt2, 2);
 
 			if($cod_usuario == null){
 				print "<script>alert(\"Credenciales incorrectas.\");window.location = '../login.php';</script>";

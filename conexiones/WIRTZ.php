@@ -1,7 +1,7 @@
 <?php
 // Conexión al SQL Server
 $servidor = "localhost\SQLEXPRESS";
-$connectionInfo = array( "Database" => "WIRTZ");
+$connectionInfo = array("Database" => "WIRTZ");
 
 //Conectamos
 $conexion = sqlsrv_connect($servidor, $connectionInfo);

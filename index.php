@@ -1,13 +1,13 @@
 <?php
   session_start();
-  if ( !isset($_SESSION["COD"]) || $_SESSION["COD"] == null) {
-    print "<script>window.location='login.php';</script>";	
+  if (!isset($_SESSION["COD"]) || $_SESSION["COD"] == null) {
+    print "<script>window.location = 'login.php';</script>";	
   }
   
   if(isset($_SESSION["BBDD"])){
     incluir('inc/'.$_SESSION["BBDD"].'');
   }else{
-    print "<script>window.location='login.php';</script>";
+    print "<script>window.location = 'login.php';</script>";
   }
 
 ?>
@@ -33,8 +33,8 @@
     <!-- overlayScrollbars -->
     <link rel = "stylesheet" href = "plugins/overlayScrollbars/css/OverlayScrollbars.min.css">	
     <!-- DataTables -->
-    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel = "stylesheet" href = "plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel = "stylesheet" href = "plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <!-- ChartJS -->
     <script src = "plugins/Chart.min.js"></script>	
     <script src = "plugins/Chart.utils.js"></script>
@@ -74,8 +74,8 @@
             <div class = "image">
               <img src = "imagenes/modelo.jpg" class = "img-circle elevation-2" alt = "User Image">
             </div>
-            <div class="info">
-              <a href="index.php" class = "d-block">Hola <?php echo $_SESSION["NOM"];?></a>
+            <div class = "info">
+              <a href = "index.php" class = "d-block">Hola <?php echo $_SESSION["NOM"];?></a>
             </div>
           </div>		
           <!-- Sidebar Menu -->
@@ -132,10 +132,10 @@
     <!-- AdminLTE App -->
     <script src = "dist/js/adminlte.js"></script>	
     <!-- DataTables -->
-    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src = "plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src = "plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src = "plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src = "plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
     <!-- ChartJS -->
     <script src = "plugins/chart.js/Chart.min.js"></script>
     <script>
